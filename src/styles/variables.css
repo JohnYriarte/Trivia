@@ -1,0 +1,13 @@
+:root {
+    /* Font Sizes */
+    --fs-large: 4rem;
+    --fs-medium: 1.5rem;
+    --fs-small: 1rem;
+
+    /* Colors */
+    --color-bg: #333;
+    --color-text: #f3f3f3;
+    --color-primary: #9834eb;
+    --color-secondary: #34ebd8;
+
+}

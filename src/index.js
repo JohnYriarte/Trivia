@@ -1,7 +1,10 @@
+import './styles/variables.css';
+import './styles/reset.css';
+import './styles/utilities.css';
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './containers/App';
+import App from './App';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

@@ -1,0 +1,15 @@
+.custom-btn {
+    color: inherit;
+    font-size: inherit;
+    
+    padding-inline: 30px;
+    padding-block: 10px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: box-shadow 0.2s;
+    border: 2px solid var(--border-color, #333);
+}
+
+.custom-btn:active {
+    box-shadow: 0px 3px var(--shadow-color) inset;
+  }

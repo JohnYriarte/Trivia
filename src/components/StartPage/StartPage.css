@@ -1,0 +1,10 @@
+h1 {
+    margin-bottom: 1rem;
+    background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h2 {
+    margin-bottom: 2rem;
+}

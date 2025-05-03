@@ -1,7 +1,7 @@
 import React from 'react';
 import './Button.css';
 
-const Button = ( {fontSize, variant, message } ) => {
+const Button = ( { onClick,variant, message } ) => {
 
     const variants = {
         easy: "easy",
@@ -10,8 +10,7 @@ const Button = ( {fontSize, variant, message } ) => {
     }
 
     return (
-        <button className={`custom-btn ${fontSize || "fs-small"} ${variants[variant] || ""}`}>{message?.toUpperCase()}</button>
-
+        <button onClick={() => onClick(variants[variant])} className={`custom-btn ${variants[variant] || ""}`}>{message?.toUpperCase()}</button>
     );
 }
 

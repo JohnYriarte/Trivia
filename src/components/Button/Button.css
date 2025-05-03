@@ -2,8 +2,8 @@
     color: inherit;
     font-size: inherit;
     
-    padding-inline: 30px;
-    padding-block: 10px;
+    padding-inline: 1.5rem;
+    padding-block: 0.5rem;
     border-radius: 50px;
     cursor: pointer;
     transition: box-shadow 0.2s;

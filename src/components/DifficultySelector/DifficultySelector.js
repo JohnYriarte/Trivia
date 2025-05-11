@@ -1,17 +1,28 @@
-import './DifficultySelector.css'
-import React from 'react'
-import Button from '../Button/Button'
-import Button2 from '../Button2/Button2'
+import "./DifficultySelector.css";
+import React from "react";
+import Button from "../Button/Button";
 
 const DifficultySelector = ({ onClick }) => {
+  const difficulties = [
+    {text:"easy", param:"easy", style:"easy"},
+    {text:"medium", param:"medium", style:"medium"},
+    {text:"hard", param:"hard", style:"hard"},
+  ];
 
-    return (
-      <div className="flex-center gap-sm fs-small">
-        <Button onClick={onClick} variant="easy" message="Easy"/>
-        <Button onClick={onClick} variant="medium" message="Medium"/>
-        <Button onClick={onClick} variant="hard" message="Hard"/>
-      </div>
-    )
-}
+  return (
+    <div className="flex-center gap-sm fs-medium">
+      {difficulties.map(({text, param, style}) => {
+        return <Button
+        key={param}
+        variant="primary"
+        onClick={() => onClick(param)}
+        className={style}
+        >
+          {text}
+        </Button>;
+      })}
+    </div>
+  );
+};
 
 export default DifficultySelector;

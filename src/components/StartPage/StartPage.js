@@ -5,9 +5,9 @@ import './StartPage.css'
 const StartPage = ({ onClick }) => {
 
     return (
-        <div className="text-center fs-large app-wrapper">
+        <div className="text-center app-wrapper">
             <h1>Welcome To Trivia World</h1>
-            <h2 className="fs-medium">Test your knowledge across categories</h2>
+            <h2>Test your knowledge across categories</h2>
             <DifficultySelector onClick={onClick}/>
         </div>
     )

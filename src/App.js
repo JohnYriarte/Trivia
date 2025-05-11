@@ -2,6 +2,7 @@ import './styles/App.css'
 import Button from './components/Button/Button'
 import { useState } from 'react'
 import StartPage from './components/StartPage/StartPage'
+import Quiz from './containers/Quiz/Quiz'
 
 function App() {
   const [difficulty, setDifficulty] = useState(null);

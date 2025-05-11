@@ -1,17 +1,21 @@
-import React from 'react';
-import './Button.css';
+import React from "react";
+import "./Button.css";
 
-const Button = ( { onClick,variant, message } ) => {
+const Button = ({ variant, className, children, ...props }) => {
+  const content =
+    typeof children === "string" ? children.toUpperCase() : children || "DEFAULT";
 
-    const variants = {
-        easy: "easy",
-        medium: "medium",
-        hard: "hard"
-    }
-
-    return (
-        <button onClick={() => onClick(variants[variant])} className={`custom-btn ${variants[variant] || ""}`}>{message?.toUpperCase()}</button>
-    );
-}
+  const variants = {
+    primary: "primary-button",
+    secondary: "secondary-button",
+  };
+  
+  return (
+    <button {...props} 
+    className={`${variants[variant]} ${className}`}>
+      {content}
+    </button>
+  );
+};
 
 export default Button;

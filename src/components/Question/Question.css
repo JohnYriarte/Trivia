@@ -1,14 +1,8 @@
-.question-details {
-    display: grid;
-    grid-template-columns: 3fr 9fr;
-    gap: 5px;
-}
-
-.detail {
+.question-wrapper {
+    width: 100%;
+    min-height: 100px;
     background: var(--color-primary);
     border: 2px solid var(--color-secondary);
     border-radius: 20px;
     padding: 0.5rem;
-    margin-bottom: 0.5rem;
-
 }

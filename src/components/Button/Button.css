@@ -1,23 +1,26 @@
-.primary-button {
-    color: inherit;
-    font-size: inherit;
-    
-    padding-inline: 1rem;
-    padding-block: 0.5rem;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: box-shadow 0.2s;
-    border: 2px solid var(--border-color, #333);
+.cstm-btn {
+  color: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  border: 2px solid var(--border-color, #333);
+  transition: box-shadow 0.2s;
 }
 
-.primary-button:active {
-    box-shadow: 0px 3px var(--shadow-color) inset;
-  }
-
-.secondary-button {
-
+.cstm-btn:active {
+  box-shadow: 0px 3px var(--shadow-color) inset;
 }
 
-.secondary-button:active {
-    
+.cstm-btn[disabled] {
+  background-color: #333;
+}
+.primary-btn {
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+  border-radius: 50px;
+}
+
+.secondary-btn {
+  padding-block: 0.5rem;
+  padding-inline: 0.75rem;
+  border-radius: 25px;
 }

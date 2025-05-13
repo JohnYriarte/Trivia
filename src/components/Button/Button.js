@@ -6,8 +6,8 @@ const Button = ({ variant, className, children, ...props }) => {
     typeof children === "string" ? children.toUpperCase() : children || "DEFAULT";
 
   const variants = {
-    primary: "primary-button",
-    secondary: "secondary-button",
+    primary: "cstm-btn primary-btn",
+    secondary: "cstm-btn secondary-btn",
   };
   
   return (

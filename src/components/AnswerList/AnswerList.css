@@ -1,0 +1,13 @@
+.answers-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+@media screen and (min-width: 525px){
+    .answers-wrapper {
+        grid-template-columns: 1fr 1fr;
+        
+    }    
+}

@@ -12,3 +12,9 @@
     margin-bottom: 0.5rem;
 
 }
+
+.next {
+  position: absolute;
+  right: 0;
+  bottom: calc(100% + 1rem);
+}

@@ -24,7 +24,7 @@ function App() {
 
   return (
     <div className="container">
-    {questions.length > 0  ? <Quiz questions={questions}/> : <StartPage onClick={getQuestions}/>}
+    {questions?.length > 0  ? <Quiz questions={questions} onMenuClick={setQuestions}/> : <StartPage onClick={getQuestions}/>}
     </div>
   );
 }

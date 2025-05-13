@@ -1,6 +1,6 @@
 .question-wrapper {
     width: 100%;
-    min-height: 100px;
+    min-height: 75px;
     background: var(--color-primary);
     border: 2px solid var(--color-secondary);
     border-radius: 20px;

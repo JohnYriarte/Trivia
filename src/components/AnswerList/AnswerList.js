@@ -11,7 +11,7 @@ const AnswerList = ({ correct_answer, answers, onHasSelectedClick, hasSelected }
           <Button key={answer}
           variant="primary"
         className={`fs-small ${(hasSelected && answer === correct_answer) ? "easy" : "medium"}`}
-          onClick={() => {onHasSelectedClick(true); console.log(hasSelected)}}
+          onClick={() => {onHasSelectedClick(true)}}
           >
             {decode(answer)}
           </Button>

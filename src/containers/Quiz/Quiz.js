@@ -1,5 +1,5 @@
 import "./Quiz.css";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { decode } from "he";
 import Question from "../../components/Question/Question";
 import AnswerList from "../../components/AnswerList/AnswerList";
@@ -9,13 +9,14 @@ const Quiz = ({ questions, onMenuClick }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isLast, setIsLast] = useState(false);
   const [hasSelected, setHasSelected] = useState(false)
-
   const questionObj = questions[currentIndex];
   const difficulty = questionObj.difficulty;
   const category = decode(questionObj.category);
   const question = decode(questionObj.question);
   const correct_answer = decodeURI(questionObj.correct_answer);
-  const answers = [correct_answer, ...questionObj.incorrect_answers];
+  const answers = useMemo(() => {
+    return [correct_answer, ...questionObj.incorrect_answers].sort(() => Math.random() - Math.random())
+  }, [questionObj]);
 
   const handlerNextClick = () => {
     setCurrentIndex((curr) => (curr + 1 < questions.length ? curr + 1 : curr));
@@ -50,6 +51,7 @@ const Quiz = ({ questions, onMenuClick }) => {
       </div>
 
       <AnswerList answers={answers}
+      correct_answer={correct_answer}
       hasSelected={hasSelected}
       onHasSelectedClick={setHasSelected}
       onNextQuestionClick={handlerNextClick} />

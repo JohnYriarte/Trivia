@@ -1,19 +1,19 @@
 import React from "react";
 import "./AnswerList.css";
-import Answer from "../Answer/Answer";
+import { decode } from "he";
 import Button from "../Button/Button";
 
-const AnswerList = ({ answers, onHasSelectedClick, hasSelected }) => {
+const AnswerList = ({ correct_answer, answers, onHasSelectedClick, hasSelected }) => {
   return (
     <div className="answers-wrapper">
       {answers.map((answer) => {
         return (
           <Button key={answer}
           variant="primary"
-          className="medium fs-small"
+        className={`fs-small ${(hasSelected && answer === correct_answer) ? "easy" : "medium"}`}
           onClick={() => {onHasSelectedClick(true); console.log(hasSelected)}}
           >
-            {answer}
+            {decode(answer)}
           </Button>
         );
       })}

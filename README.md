@@ -1,4 +1,4 @@
-# TRIVIA WORLD
+# ✨ TRIVIA WORLD ✨
 
 A fun, interactive trivia game built with React.  
 Challenge your knowledge across various categories and difficulty levels.  

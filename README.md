@@ -2,7 +2,7 @@
 
 A fun, interactive trivia game built with React.  
 Challenge your knowledge across various categories and difficulty levels.  
-[Try it out!!!](https://johnyriarte.github.io/Trivia/).
+Consider [trying it out!](https://johnyriarte.github.io/Trivia/)
 
 ## 🚀 Features
 
